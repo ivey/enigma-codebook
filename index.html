@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>ivey/enigma-codebook @ GitHub</title>
+	
+	<style type="text/css">
+		body {
+  		margin-top: 1.0em;
+  		background-color: #1d4c10;
+		  font-family: "helvetica"; 
+  		color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+		h1 { font-size: 3.8em; color: #e2b3ef; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; }
+		h1 a { text-decoration: none }
+		h2 { font-size: 1.5em; color: #e2b3ef; }
+    h3 { text-align: center; color: #e2b3ef; }
+    a { color: #e2b3ef; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+		pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+</head>
+
+<body>
+  <a href="http://github.com/ivey/enigma-codebook"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/ivey/enigma-codebook/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/ivey/enigma-codebook/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+      
+    <h1><a href="http://github.com/ivey/enigma-codebook">enigma-codebook</a> 
+      <span class="small">by <a href="http://github.com/ivey">ivey</a></small></h1>
+
+    <div class="description">
+      Sinatra app to generate codebooks for Enigma machines
+    </div>
+
+    <p><h1>Enigma Codebook Generator</h1>
+
+<p>Sinatra app to generate Enigma codebooks</p>
+
+<p>Sample Output:</p>
+
+<p><img src="http://github.com/ivey/enigma-codebook/raw/44012531bc262a2b42a7edc69643b3fc6d3b66ed/sample.jpg" alt="sample output" /></p>
+
+<h2>Steps to doing WWII cryptography</h2>
+
+<ol>
+<li>Download enigma-codebook.rb</li>
+
+<li>Make sure you have Ruby installed (http://ruby-lang.org)</li>
+
+<li>&#8220;sudo gem install sinatra&#8221;</li>
+
+<li>ruby enigma-codebook.rb</li>
+
+<li>Visit http://localhost:4567 in your browser</li>
+
+<li>Tweak settings if you like, or hit generate</li>
+
+<li>Send a copy of the codebook to your partner via a secure channel</li>
+
+<li>Get an Enigma machine</li>
+
+<li>Fail at step 8, and get an emulator. <a href="http://www.terrylong.org/">Here&#8217;s one for OS X</a></li>
+
+<li>Enter today&#8217;s settings from the codebook into your emulator.</li>
+
+<li>Select a random start position for your message, for instance, WZA.</li>
+
+<li>Move the rotors to the WZA start position.</li>
+
+<li>Select a message key, say SXT.</li>
+
+<li>Encode &#8220;SXT&#8221; and save the result, pretend it&#8217;s UHL but it won&#8217;t be.</li>
+
+<li>Move the rotors to SXT.</li>
+
+<li>Encode your message.</li>
+
+<li>Now, transmit start position (WZA), encoded message key (SXT), followed by your encoded message.</li>
+
+<li>Wait for Bletchley Park to read it.</li>
+</ol>
+
+<h2>Don&#8217;t use this</h2>
+
+<p>Seriously, don&#8217;t use this codebook for anything important. Not that you&#8217;d be using an Enigma to do real crypto, but if you were thinking about it, stop. These codebooks use Ruby&#8217;s built-in pseudo random number generator, which means they&#8217;re pretty hackable. This is for fun, and by using this code you waive any rights to sue me if you&#8217;re an idiot and someone steals your secrets.</p>
+
+<h2>More Info</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Enigma_machine">Wikipedia article</a></li>
+
+<li><a href="http://users.telenet.be/d.rijmenants/en/enigmaproc.htm">Enigma Procedure</a></li>
+</ul>
+
+</p><h2>Dependencies</h2>
+<p>sinatra</p>
+<h2>Install</h2>
+<p>Download it and run it</p>
+<h2>License</h2>
+<p>MIT</p>
+<h2>Authors</h2>
+<p>Michael D. Ivey (ivey@gweezlebur.com)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>Michael D. Ivey (ivey@gweezlebur.com)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/ivey/enigma-codebook/zipball/master">zip</a> or
+      <a href="http://github.com/ivey/enigma-codebook/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/ivey/enigma-codebook</pre>
+    </p>
+      
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/ivey/enigma-codebook">ivey/enigma-codebook</a>
+    </div>
+    
+  </div>
+
+  
+</body>
+</html>
