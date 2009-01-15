@@ -1,38 +1,55 @@
-%form{:method => "post"}
-  .option
-    %label{:for => "days"} # Days
-    %input{:type => "text", :name => "days", :size => 2, :value => 31 }
-  .option
-    %label{:for => "rotors"} # Rotors
-    %input{:type => "text", :name => "rotors", :size => 1, :value => 3 }
-  .option
-    %label{:for => "reflector"} Reflector Positions
-    %input{:type => "text", :name => "reflectors", :size => 1, :value => 3}
-  .option
-    %input{:type => "submit", :value => "Generate"}
+!!!
+%html 
+  %head
+    %title Enigma Codebook Generator
+    %style{ :type => "text/css" } 
+      :sass
+        tr
+          :font-family Courier
+          :text-align center
+        table
+          :border-width 1px
+          :border-spacing 2px
+          :border-style solid
+          :border-collapse collapse
+          :border-color #000
+        th, td
+          :border-width 1px
+          :border-style solid
+          :padding 1px 10px
+          :border-color #000
+        input
+          :margin-right 25px
+  %body
+    %h1 Enigma Codebook Generator
+    %form{:method => "post"}
+      %label{:for => "days"} # Days
+      %input{:type => "text", :name => "days", :size => 2, :value => 31 }
+      %label{:for => "rotors"} # Rotors
+      %input{:type => "text", :name => "rotors", :size => 1, :value => 5 }
+      %label{:for => "reflector"} Reflectors
+      %input{:type => "text", :name => "reflectors", :size => 1, :value => 3}
+      %input{:type => "submit", :value => "Generate"}
 
-- if @days
-  %table
-    %tr
-      %th Day
-      %th Rotors
-      %th Rings
-      %th Reflector
-      %th Plugs
-      - @days.each do |d|
+    - if @days
+      %table
         %tr
-          %td
-            %pre
+          %th Day
+          %th Walzen<br/>(Rotors)
+          %th Ringstellung<br/>(Rings)
+          %th Umkehrwalze<br/>(Reflector)
+          %th Steckerbrett<br/>(Plugs)
+        - @days.each do |d|
+          %tr
+            %td
               =d[0]
-          %td
-            %pre
+            %td
               ="#{d[1]} #{d[2]} #{d[3]}"
-          %td
-            %pre
+            %td
               ="#{d[4]} #{d[5]} #{d[6]}"
-          %td
-            %pre
+            %td
               =d[7]
-          %td
-            %pre
+            %td
               ="#{d[8][0]}-#{d[8][1]}  #{d[9][0]}-#{d[9][1]}  #{d[10][0]}-#{d[10][1]}"
+
+    .footer Copyright &copy; 2009 Michael D. Ivey <ivey@gweezlebur.com>
