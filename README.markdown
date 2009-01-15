@@ -5,7 +5,7 @@ Sinatra app to generate Enigma codebooks
 
 Sample Output:
 
-![sample output](sample.jpg)
+![sample output](http://github.com/ivey/enigma-codebook/raw/44012531bc262a2b42a7edc69643b3fc6d3b66ed/sample.jpg)
 
 
 Steps to doing WWII cryptography
