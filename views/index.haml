@@ -22,13 +22,13 @@
           :margin-right 25px
   %body
     %h1 Enigma Codebook Generator
-    %form{:method => "post"}
+    %form{:method => "get"}
       %label{:for => "days"} # Days
-      %input{:type => "text", :name => "days", :size => 2, :value => 31 }
+      %input{:type => "text", :name => "days", :size => 2, :value => params[:days] }
       %label{:for => "rotors"} # Rotors
-      %input{:type => "text", :name => "rotors", :size => 1, :value => 5 }
+      %input{:type => "text", :name => "rotors", :size => 1, :value => params[:rotors] }
       %label{:for => "reflector"} Reflectors
-      %input{:type => "text", :name => "reflectors", :size => 1, :value => 3}
+      %input{:type => "text", :name => "reflectors", :size => 1, :value => params[:reflectors]}
       %input{:type => "submit", :value => "Generate"}
 
     - if @days
